@@ -5,23 +5,17 @@
  * @format
  * @flow strict-local
  */
+import 'react-native-gesture-handler';
+import * as React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {StatusBar} from 'react-native';
+import Main from './Pages/Main';
 
-import React from 'react';
-import {SafeAreaView, Text, StatusBar} from 'react-native';
-
-import Geolocation from '@react-native-community/geolocation';
-
-Geolocation.getCurrentPosition((info) => console.log(info));
-
-const App = () => {
+export default function App() {
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <Text>Teste</Text>
-      </SafeAreaView>
-    </>
+    <NavigationContainer>
+      <StatusBar barStyle="light-content" hidden />
+      <Main />
+    </NavigationContainer>
   );
-};
-
-export default App;
+}

@@ -1,15 +1,15 @@
 import axios from 'axios';
 
-import {OPENWEATHER_APP_ID} from 'react-native-dotenv';
+import {API_KEY} from '../utils/OpenweatherKey';
 
 const api = axios.create({
   baseURL: 'http://api.openweathermap.org/data/2.5/',
 });
 
-api.interceptors.request.use((config) => {
+api.interceptors.request.use(config => {
   config.params = config.params || {};
 
-  config.params.APPID = OPENWEATHER_APP_ID;
+  config.params.APPID = API_KEY;
   config.params.units = config.params.units || 'metric';
 
   return config;
