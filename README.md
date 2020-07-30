@@ -8,6 +8,6 @@ Clone this repo and use yarn install to install all the dependencies, then use n
 
 - Axios
 - Styled Components
-- @react-native-community/geolocation
+- react-native-community/geolocation
 - react-native-vector-icons
 - ESLint
